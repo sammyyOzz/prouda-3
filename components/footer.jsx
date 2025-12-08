@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="footer-left">
             <p>&copy; All rights reserved.</p>
           </div>
-          <div className="footer-right">
+          {/* <div className="footer-right">
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms of Use</Link>
             <Link href="/sitemap">Sitemap</Link>
@@ -19,7 +19,7 @@ export default function Footer() {
             >
               Provided by TemplateMo
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
