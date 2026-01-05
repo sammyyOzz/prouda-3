@@ -57,6 +57,7 @@ export default function Navbar() {
     { name: 'About', href: '/about' },
     { name: 'Tutors', href: '/tutors' },
     { name: 'Courses', href: '/courses' },
+    { name: 'Collaboration', href: '/collaboration' },
     { name: 'Blogs', href: '/blogs' },
     { name: 'Contact', href: '/contact' },
   ];
