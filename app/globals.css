@@ -1360,6 +1360,17 @@ https://templatemo.com/tm-593-personal-shape
             transform: translateX(0);
         }
 
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scale-in.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 1024px) {
             .portfolio-grid {
