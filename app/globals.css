@@ -12,8 +12,8 @@ https://templatemo.com/tm-593-personal-shape
 /* CSS Document */
 
         * {
-            margin: 0;
-            padding: 0;
+            /* margin: 0;
+            padding: 0; */
             box-sizing: border-box;
         }
 
@@ -550,10 +550,166 @@ https://templatemo.com/tm-593-personal-shape
             border-color: rgba(255, 255, 255, 0.4);
         }
 
+        /* Two-Column Hero Layout */
+        .hero-content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            width: 100%;
+            max-width: 1400px;
+            padding: 0 2rem;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-content {
+            text-align: left;
+            color: var(--text-light);
+            z-index: 2;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .hero h1 {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.4s forwards;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.6s forwards;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .cta-buttons-container {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.8s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            letter-spacing: 0.5px;
+            cursor: pointer;
+        }
+
+        .hero-video {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.8s forwards;
+        }
+
+        .hero-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design for Hero */
+        @media (max-width: 1024px) {
+            .hero-content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .cta-buttons-container {
+                flex-direction: column;
+                width: fit-content;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content-wrapper {
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                padding: 0.9rem 1.5rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 0.85rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.2rem;
+                font-size: 0.75rem;
+            }
+
+            .cta-buttons-container {
+                gap: 0.75rem;
             }
         }
 
