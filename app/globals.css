@@ -1,3 +1,6 @@
+@charset "utf-8";
+@import "tailwindcss";
+
 /*
 
 TemplateMo 593 personal shape
@@ -6,7 +9,6 @@ https://templatemo.com/tm-593-personal-shape
 
 */
 
-@charset "utf-8";
 /* CSS Document */
 
         * {

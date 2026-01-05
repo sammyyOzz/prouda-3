@@ -39,10 +39,12 @@ export default function Hero() {
         <div className="shape shape-6"></div>
       </div>
       <div className="hero-content">
-        <div className="hero-subtitle">Lorem ipsum</div>
-        <h1>The main title goes here</h1>
-        <p className="subtitle">Lorem ipsum dolor sit amet consecutor...</p>
+        {/* <div className="hero-subtitle">Lorem ipsum</div> */}
+        <h1>Train. Teach. Earn Globally</h1>
+        <p className="subtitle">Prouda Tutors trains, certifies, and connects teachers to global online teaching opportunities.</p>
         {/* <a href="portfolio.html" className="cta-button">Explore My Work</a> */}
+        <button className="cta-button">Become a Prouda Tutor</button>
+        <button className="cta-button">Hire a Tutor</button>
       </div>
       {/* <div className="scroll-indicator" onClick={() => window.location.href='about.html'}></div> */}
     </section>
