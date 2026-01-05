@@ -151,6 +151,79 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Courses Highlight Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">Our Training Programs</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">Explore our comprehensive courses designed to equip you with the skills needed to teach English globally.</p>
+            <div className="w-20 h-1 bg-amber-400 mx-auto mt-6"></div>
+          </div>
+
+          {/* Courses Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 px-4">
+            {/* Course Card 1 */}
+            <div className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-6 sm:p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-amber-800 mb-3">Our Training Programs</h3>
+              <p className="text-gray-600 leading-relaxed">Comprehensive curricula designed to transform aspiring teachers into confident ESL professionals ready for the global classroom.</p>
+            </div>
+
+            {/* Course Card 2 */}
+            <div className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-6 sm:p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-amber-800 mb-3">ESL Teaching Practicum</h3>
+              <p className="text-gray-600 leading-relaxed">Hands-on practical experience with real students, combining teaching methodology with live classroom interaction and feedback.</p>
+            </div>
+
+            {/* Course Card 3 */}
+            <div className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-6 sm:p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-amber-800 mb-3">Upskill Teachers Program</h3>
+              <p className="text-gray-600 leading-relaxed">Advanced training for experienced teachers looking to upgrade their certifications and expand their teaching opportunities worldwide.</p>
+            </div>
+          </div>
+
+          {/* View Courses Button */}
+          <div className="flex justify-center">
+            <a
+              href="/courses"
+              className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              View All Courses →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Banner */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-amber-600 to-amber-700 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Start Your Global Teaching Journey</h2>
+          <p className="text-lg sm:text-xl text-amber-50 mb-10 leading-relaxed">Join thousands of teachers who are earning globally and making a difference in students' lives worldwide. Your journey starts here.</p>
+          
+          <a
+            href="/courses"
+            className="inline-block bg-white hover:bg-amber-50 text-amber-700 font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
+          >
+            Explore Courses Now
+          </a>
+        </div>
+      </section>
     </>
   );
 }

@@ -85,7 +85,7 @@ export default function TestimonialsSlider() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 px-4">
       {/* Main Slider */}
       <div className="relative w-full bg-black rounded-lg overflow-hidden shadow-2xl">
         {/* Slide Container */}
