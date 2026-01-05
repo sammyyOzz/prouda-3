@@ -1,3 +1,6 @@
+import Countdown from '@/components/countdown';
+import TestimonialsSlider from '@/components/testimonials-slider';
+
 export default function Home() {
   return (
     <>
@@ -102,6 +105,49 @@ export default function Home() {
               <h3 className="text-xl sm:text-2xl font-bold text-amber-800 mb-3">Ongoing Support</h3>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">Through workshops and community learning, teachers continue to grow.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted By Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-linear-to-r from-amber-700 to-amber-800 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">Trusted By</h2>
+            <div className="flex items-center justify-center gap-3">
+              <svg className="w-6 h-6 sm:w-7 sm:h-7 text-yellow-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <p className="text-lg sm:text-xl lg:text-2xl text-white font-light">20+ partner schools/companies across Asia, Middle East and Europe</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">What Our Teachers Say</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">Hear from our community of educators and discover how Prouda Tutors is transforming teaching careers worldwide.</p>
+            <div className="w-20 h-1 bg-amber-400 mx-auto mt-6"></div>
+          </div>
+
+          {/* Testimonials Slider */}
+          <TestimonialsSlider />
+        </div>
+      </section>
+
+      {/* Launching Soon Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">Launching Soon</h2>
+            <p className="text-lg sm:text-xl text-gray-600 mb-12 lg:mb-16">Get ready for something amazing. Our platform is coming soon!</p>
+            
+            {/* Countdown Component */}
+            <Countdown />
           </div>
         </div>
       </section>
