@@ -1,107 +1,308 @@
-"use client"
+'use client';
 
-import React, { useEffect } from "react";
+import { useState } from 'react';
 
 export default function Contact() {
-  useEffect(() => {
-      // Intersection Observer for scroll animations
-      const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -80px 0px'
-      };
-  
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-          }
-        });
-      }, observerOptions);
-  
-      const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-      animatedElements.forEach(el => observer.observe(el));
-  
-      return () => {
-        observer.disconnect();
-      };
-    }, []);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Contact form submitted:', formData);
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    }, 3000);
+  };
+
+  const socialLinks = [
+    {
+      name: 'Instagram',
+      icon: '📷',
+      url: 'https://www.instagram.com/proudatutors?igsh=MW9pYmN0dTdnYXUxaA==',
+      color: 'hover:text-pink-600',
+    },
+    {
+      name: 'YouTube',
+      icon: '▶️',
+      url: 'https://www.youtube.com/@proudatutorsbychimy',
+      color: 'hover:text-red-600',
+    },
+    {
+      name: 'TikTok',
+      icon: '♪',
+      url: 'https://www.tiktok.com/@proudatutors?_r=1&_t=ZS-92Ku2zatFIK',
+      color: 'hover:text-gray-900',
+    },
+    {
+      name: 'Facebook',
+      icon: 'f',
+      url: 'https://www.facebook.com/share/1GM62TNXZq/',
+      color: 'hover:text-blue-600',
+    },
+  ];
 
   return (
-    <section class="contact">
-      <div class="contact-floating-shapes">
-        <div class="contact-shape contact-shape-1"></div>
-        <div class="contact-shape contact-shape-2"></div>
-        <div class="contact-shape contact-shape-3"></div>
-        <div class="contact-shape contact-shape-4"></div>
-        <div class="contact-shape contact-shape-5"></div>
-        <div class="contact-shape contact-shape-6"></div>
-      </div>
-      <div class="container">
-        <h2 class="section-title fade-in">Contact Us</h2>
-
-        <div class="contact-info-grid">
-          <div class="contact-info-card">
-            <div class="contact-icon">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-            </div>
-            <h3>Phone</h3>
-            <p>
-              <a href="tel:+1234567890">+1 (234) 567-890</a>
-            </p>
-          </div>
-
-          <div class="contact-info-card">
-            <div class="contact-icon">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </svg>
-            </div>
-            <h3>Email</h3>
-            <p>
-              <a href="mailto:hello@example.com">hello@example.com</a>
-            </p>
-          </div>
-
-          <div class="contact-info-card">
-            <div class="contact-icon">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-            </div>
-            <h3>Address</h3>
-            <p>
-              123 ABC Street
-              <br />
-              lorem ipsum
+    <>
+      {/* Hero Section */}
+      <section className="pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 bg-linear-to-b from-amber-50 to-white px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800 mb-6">
+              Contact Us
+            </h1>
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              We would love to hear from you!
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            {/* Contact Info */}
+            <div className="space-y-10 px-4">
+              <div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-6">Get In Touch</h2>
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8">
+                  Have questions about our courses, partnerships, or anything else? We're here to help! Reach out to us through any of the channels below.
+                </p>
+              </div>
+
+              {/* Email */}
+              <div className="bg-linear-to-r from-amber-50 to-white border-2 border-amber-200 rounded-lg p-6 sm:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl">✉️</div>
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-amber-800 mb-2">Email</h3>
+                    <p className="text-gray-600 text-base sm:text-lg mb-3">
+                      Feel free to reach out to us directly via email
+                    </p>
+                    <a
+                      href="mailto:proudatutors@gmail.com"
+                      className="inline-block text-amber-600 hover:text-amber-700 font-semibold text-base sm:text-lg transition-colors"
+                    >
+                      proudatutors@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social Media */}
+              <div className="bg-white border-2 border-gray-200 rounded-lg p-6 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-amber-800 mb-6">Follow Us</h3>
+                <p className="text-gray-600 text-base sm:text-lg mb-6">
+                  Connect with us on social media for updates, tips, and community highlights
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-amber-500 transition-all duration-300 ${link.color}`}
+                    >
+                      <div className="text-4xl mb-2">{link.icon}</div>
+                      <p className="text-sm font-semibold text-gray-700">{link.name}</p>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Quick Response */}
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 sm:p-8 rounded-r-lg">
+                <h4 className="font-bold text-blue-900 mb-2">Quick Response</h4>
+                <p className="text-blue-800 text-base">
+                  We typically respond to emails within 24-48 hours. For urgent inquiries, please use the contact form below.
+                </p>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div id="send-message" className="px-4">
+              <div className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-8 sm:p-10 lg:p-12">
+                <h3 className="text-2xl sm:text-3xl font-bold text-amber-800 mb-2">Send Us a Message</h3>
+                <p className="text-gray-600 text-base mb-8">
+                  Fill out the form below and we'll get back to you as soon as possible.
+                </p>
+
+                {isSubmitted ? (
+                  <div className="text-center py-12 bg-green-50 rounded-lg">
+                    <div className="text-6xl mb-4">✓</div>
+                    <h4 className="text-2xl font-bold text-green-800 mb-2">Message Sent!</h4>
+                    <p className="text-green-700">
+                      Thank you for reaching out. We'll be in touch soon.
+                    </p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Name */}
+                    <div>
+                      <label htmlFor="name" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                      <label htmlFor="email" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                        placeholder="Enter your email address"
+                      />
+                    </div>
+
+                    {/* Subject */}
+                    <div>
+                      <label htmlFor="subject" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                        Subject *
+                      </label>
+                      <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                        placeholder="What is this about?"
+                      />
+                    </div>
+
+                    {/* Message */}
+                    <div>
+                      <label htmlFor="message" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        required
+                        rows="6"
+                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors resize-none text-base"
+                        placeholder="Tell us your message or inquiry..."
+                      ></textarea>
+                    </div>
+
+                    {/* Submit Button */}
+                    <button
+                      type="submit"
+                      className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg sm:text-xl text-gray-600">Have questions? We might have answers!</p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: 'How long does it take to get a response?',
+                a: 'We aim to respond to all inquiries within 24-48 hours during business days.',
+              },
+              {
+                q: 'Can I apply for multiple courses?',
+                a: 'Yes! You can apply for multiple courses. Just fill out separate application forms for each course.',
+              },
+              {
+                q: 'Do you offer refunds?',
+                a: 'Please contact us directly at proudatutors@gmail.com for information about our refund policy.',
+              },
+              {
+                q: 'How can I become a partner?',
+                a: 'Visit our Collaboration & Partnership page to learn about partnership opportunities and submit your inquiry.',
+              },
+            ].map((faq, idx) => (
+              <div key={idx} className="bg-white border-l-4 border-amber-500 rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-lg sm:text-xl font-bold text-amber-800 mb-3">{faq.q}</h3>
+                <p className="text-gray-700 text-base sm:text-lg">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-amber-600 to-amber-700 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Join Our Community
+          </h2>
+          <p className="text-lg sm:text-xl text-amber-50 mb-8 leading-relaxed max-w-2xl mx-auto">
+            Whether you're ready to start your teaching journey or looking to partner with us, we're excited to connect with you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <a
+              href="#send-message"
+              className="inline-block bg-white text-amber-600 font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg text-base sm:text-lg"
+            >
+              Send a Message
+            </a>
+            <a
+              href="/courses"
+              className="inline-block border-2 border-white text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-lg hover:bg-white hover:text-amber-600 transition-all duration-300 text-base sm:text-lg"
+            >
+              Explore Courses
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
