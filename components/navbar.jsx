@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
@@ -65,8 +66,18 @@ export default function Navbar() {
   return (
     <>
       <nav id="navbar" className={isScrolled ? 'scrolled' : ''}>
-        <div className="nav-container">
-          <div className="logo">LOGO</div>
+        <div className="nav-container relative h-16">
+          <Link href="/" className="absolute left-0 top-1/2 -translate-y-1/2">
+            <Image
+              src="/prouda-logo.webp"
+              alt="Prouda Tutors Logo"
+              width={70}
+              height={100}
+              priority
+              className="h-auto w-auto"
+            />
+          </Link>
+          <div className='invisible'>.</div>
           
           <ul className="nav-links">
             {navItems.map((item) => (

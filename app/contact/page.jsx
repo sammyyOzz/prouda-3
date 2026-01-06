@@ -1,6 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import FacebookIcon from '@/icons/facebook';
+import InstagramIcon from '@/icons/instagram';
+import YoutubeIcon from '@/icons/youtube';
+import TiktokIcon from '@/icons/tiktok';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -38,25 +42,25 @@ export default function Contact() {
   const socialLinks = [
     {
       name: 'Instagram',
-      icon: '📷',
+      icon: InstagramIcon,
       url: 'https://www.instagram.com/proudatutors?igsh=MW9pYmN0dTdnYXUxaA==',
       color: 'hover:text-pink-600',
     },
     {
       name: 'YouTube',
-      icon: '▶️',
+      icon: YoutubeIcon,
       url: 'https://www.youtube.com/@proudatutorsbychimy',
       color: 'hover:text-red-600',
     },
     {
       name: 'TikTok',
-      icon: '♪',
+      icon: TiktokIcon,
       url: 'https://www.tiktok.com/@proudatutors?_r=1&_t=ZS-92Ku2zatFIK',
       color: 'hover:text-gray-900',
     },
     {
       name: 'Facebook',
-      icon: 'f',
+      icon: FacebookIcon,
       url: 'https://www.facebook.com/share/1GM62TNXZq/',
       color: 'hover:text-blue-600',
     },
@@ -117,18 +121,23 @@ export default function Contact() {
                   Connect with us on social media for updates, tips, and community highlights
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  {socialLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-amber-500 transition-all duration-300 ${link.color}`}
-                    >
-                      <div className="text-4xl mb-2">{link.icon}</div>
-                      <p className="text-sm font-semibold text-gray-700">{link.name}</p>
-                    </a>
-                  ))}
+                  {socialLinks.map((link) => {
+                    const IconComponent = link.icon;
+                    return (
+                      <a
+                        key={link.name}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-amber-500 transition-all duration-300 ${link.color}`}
+                      >
+                        <div className="mb-2">
+                          <IconComponent className="w-8 h-8" />
+                        </div>
+                        <p className="text-sm font-semibold text-gray-700">{link.name}</p>
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
 

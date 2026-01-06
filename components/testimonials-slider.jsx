@@ -95,7 +95,7 @@ export default function TestimonialsSlider() {
               key={`video-${currentIndex}`}
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${currentTestimonial.id}?autoplay=1`}
+              src={`https://www.youtube.com/embed/${currentTestimonial.id}?autoplay=1&mute=1`}
               title={currentTestimonial.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
