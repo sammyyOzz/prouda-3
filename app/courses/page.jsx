@@ -130,134 +130,122 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Courses Cards Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 lg:mb-16">
+      {/* Courses Sections */}
+      <section className="py-12 sm:py-16 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-16 sm:space-y-20 lg:space-y-24">
+          {/* Section Header */}
+          <div className="text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">Explore Our Training Programs</h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">Choose the course that best fits your teaching journey</p>
             <div className="w-20 h-1 bg-amber-400 mx-auto mt-6"></div>
           </div>
 
-          {/* Course Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
-            {courses.map((course) => (
-              <div
-                key={course.id}
-                className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
-              >
-                {/* Card Header */}
-                <div className="bg-linear-to-r from-amber-50 to-amber-100 p-6 sm:p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-5xl">{course.icon}</div>
-                    <span className={`${course.badgeColor} text-white text-xs sm:text-sm font-bold px-3 py-1 rounded-full`}>
+          {/* Individual Course Sections */}
+          {courses.map((course, idx) => (
+            <div
+              key={course.id}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
+                idx % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}
+            >
+              {/* Left Column - Information */}
+              <div className={`${idx % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+                <div className="bg-white">
+                  {/* Badge and Icon */}
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="text-5xl sm:text-6xl">{course.icon}</div>
+                    <span className={`${course.badgeColor} text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full h-fit`}>
                       {course.badge}
                     </span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-amber-800 mb-2">{course.title}</h3>
-                  <p className="text-gray-700 text-base sm:text-lg">{course.shortDesc}</p>
-                </div>
 
-                {/* Card Body */}
-                <div className="p-6 sm:p-8 flex-1">
-                  <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">{course.description}</p>
+                  {/* Title and Short Description */}
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-800 mb-4">
+                    {course.title}
+                  </h3>
+                  <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
+                    {course.shortDesc}
+                  </p>
+
+                  {/* Full Description */}
+                  <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-8">
+                    {course.description}
+                  </p>
 
                   {/* Key Benefits */}
-                  <div className="mb-6">
-                    <h4 className="font-bold text-amber-800 mb-3 text-base sm:text-lg">Key Benefits:</h4>
-                    <ul className="space-y-2">
-                      {course.benefits.slice(0, 3).map((benefit, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm sm:text-base text-gray-700">
-                          <span className="text-amber-500 font-bold mt-1">✓</span>
+                  <div className="mb-8">
+                    <h4 className="font-bold text-amber-800 mb-4 text-lg">Key Benefits:</h4>
+                    <ul className="space-y-3">
+                      {course.benefits.map((benefit, bidx) => (
+                        <li key={bidx} className="flex items-start gap-3 text-base text-gray-700">
+                          <span className="text-amber-500 font-bold text-lg mt-0.5">✓</span>
                           <span>{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
 
-                {/* Card Footer */}
-                <div className="p-6 sm:p-8 border-t border-gray-200 space-y-3">
-                  <button
-                    onClick={() => setActiveTab(activeTab === course.id ? null : course.id)}
-                    className="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
-                  >
-                    {activeTab === course.id ? 'Hide Details' : 'Learn More'}
-                  </button>
+                  {/* Ideal For */}
+                  <div className="mb-10 bg-amber-50 p-6 rounded-lg">
+                    <h4 className="font-bold text-amber-800 mb-4 text-lg">Ideal For:</h4>
+                    <ul className="space-y-2">
+                      {course.idealFor.map((item, iidx) => (
+                        <li key={iidx} className="flex items-start gap-3 text-base text-gray-700">
+                          <span className="text-amber-600 font-bold">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Button */}
                   <button
                     onClick={() => {
                       setFormData({ ...formData, course: course.title });
                       document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="w-full bg-white border-2 border-amber-500 text-amber-600 font-semibold py-3 px-6 rounded-lg hover:bg-amber-50 transition-all duration-300"
+                    className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-base sm:text-lg"
                   >
                     Apply Now
                   </button>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Expanded Course Details */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-12">
-          {courses.map((course) => (
-            activeTab === course.id && (
-              <div key={course.id} className="bg-white rounded-lg p-8 sm:p-10 lg:p-12 shadow-md border-l-4 border-amber-500">
-                {/* Course Video */}
-                {course.youtubeUrl && (
-                  <div className="mb-10">
-                    <h3 className="text-2xl font-bold text-amber-800 mb-6">Course Overview Video</h3>
-                    <div className="relative w-full pb-[56.25%] bg-black rounded-lg overflow-hidden">
-                      <iframe
-                        className="absolute top-0 left-0 w-full h-full"
-                        src={`https://www.youtube.com/embed/${course.youtubeUrl.split('v=')[1] || course.youtubeUrl.split('/')[3]}`}
-                        title={course.title}
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  </div>
-                )}
-
-                {/* Full Description */}
-                <div className="mb-10">
-                  <h3 className="text-2xl font-bold text-amber-800 mb-4">About This Course</h3>
-                  <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">{course.description}</p>
-                </div>
-
-                {/* All Benefits */}
-                <div className="mb-10">
-                  <h3 className="text-2xl font-bold text-amber-800 mb-6">What You'll Get</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {course.benefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-start gap-3 bg-amber-50 p-4 rounded-lg">
-                        <span className="text-amber-600 font-bold text-xl mt-1">✓</span>
-                        <span className="text-gray-700 text-base">{benefit}</span>
+              {/* Right Column - Video or Image */}
+              <div className={`${idx % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+                <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg h-full min-h-96 flex items-center justify-center">
+                  {/* YouTube Video */}
+                  {course.youtubeUrl && (
+                    <div className="w-full h-full">
+                      <div className="relative w-full h-full pb-[56.25%] lg:pb-0 lg:h-96">
+                        <iframe
+                          className="absolute top-0 left-0 w-full h-full lg:relative"
+                          src={`https://www.youtube.com/embed/${course.youtubeUrl.split('v=')[1] || course.youtubeUrl.split('/')[3]}`}
+                          title={course.title}
+                          allowFullScreen
+                          loading="lazy"
+                        ></iframe>
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    </div>
+                  )}
 
-                {/* Ideal For */}
-                <div>
-                  <h3 className="text-2xl font-bold text-amber-800 mb-6">Who Is This Course For?</h3>
-                  <p className="text-gray-700 text-base sm:text-lg mb-4">This course is ideal for:</p>
-                  <ul className="space-y-3">
-                    {course.idealFor.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-base sm:text-lg text-gray-700">
-                        <span className="text-amber-600 font-bold">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Fallback Image if No Video */}
+                  {!course.youtubeUrl && (
+                    <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-amber-100 to-amber-200">
+                      <div className="text-center">
+                        <div className="text-7xl mb-4">{course.icon}</div>
+                        <p className="text-lg font-semibold text-amber-900">{course.title}</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
-            )
+            </div>
           ))}
         </div>
       </section>
+
+      
 
       {/* Application Form Section */}
       <section id="application-form" className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
