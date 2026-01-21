@@ -1,5 +1,6 @@
 import Countdown from '@/components/countdown';
 import TestimonialsSlider from '@/components/testimonials-slider';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -22,8 +23,8 @@ export default function Home() {
               online teaching opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <button className="cta-button">Become a Prouda Tutor</button>
-              <button className="cta-button">Hire a Tutor</button>
+              <Link href="/courses" className="cta-button">Become a Prouda Tutor</Link>
+              <Link href="/tutors#hire-tutor" className="cta-button">Hire a Tutor</Link>
             </div>
           </div>
 
