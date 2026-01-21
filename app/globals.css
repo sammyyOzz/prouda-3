@@ -528,8 +528,8 @@ https://templatemo.com/tm-593-personal-shape
         .cta-button {
             display: inline-block;
             padding: 1.2rem 3rem;
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--text-light);
+            background: #1b5276;
+            color: #ffffff;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
@@ -538,16 +538,16 @@ https://templatemo.com/tm-593-personal-shape
             opacity: 0;
             animation: fadeInUp 1s ease 0.8s forwards;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid #1b5276;
             backdrop-filter: blur(10px);
             letter-spacing: 0.5px;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.25);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            border-color: rgba(255, 255, 255, 0.4);
+            background: #153f5e;
+            box-shadow: 0 20px 40px rgba(27, 82, 118, 0.3);
+            border-color: #153f5e;
         }
 
         /* Two-Column Hero Layout */
@@ -606,14 +606,14 @@ https://templatemo.com/tm-593-personal-shape
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--text-light);
+            background: #1b5276;
+            color: #ffffff;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.95rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid #1b5276;
             backdrop-filter: blur(10px);
             letter-spacing: 0.5px;
             cursor: pointer;

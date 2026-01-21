@@ -60,7 +60,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/courses"
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base"
+                  className="text-gray-400 hover:text-[#f7dc6f] transition-colors text-sm sm:text-base"
                 >
                   Courses
                 </Link>
@@ -68,7 +68,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/collaboration"
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base"
+                  className="text-gray-400 hover:text-[#f7dc6f] transition-colors text-sm sm:text-base"
                 >
                   Hire a Tutor
                 </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base"
+                  className="text-gray-400 hover:text-[#f7dc6f] transition-colors text-sm sm:text-base"
                 >
                   About Us
                 </Link>
@@ -84,7 +84,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base"
+                  className="text-gray-400 hover:text-[#f7dc6f] transition-colors text-sm sm:text-base"
                 >
                   Contact
                 </Link>
@@ -99,7 +99,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/blogs"
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base"
+                  className="text-gray-400 hover:text-[#f7dc6f] transition-colors text-sm sm:text-base"
                 >
                   Blog
                 </Link>
@@ -107,7 +107,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/collaboration"
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base"
+                  className="text-gray-400 hover:text-[#f7dc6f] transition-colors text-sm sm:text-base"
                 >
                   Partnerships
                 </Link>
@@ -115,7 +115,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:proudatutors@gmail.com"
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base"
+                  className="text-gray-400 hover:text-[#f7dc6f] transition-colors text-sm sm:text-base"
                 >
                   Get Support
                 </a>
@@ -155,13 +155,13 @@ export default function Footer() {
             <div className="flex gap-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-amber-500 transition-colors text-sm"
+                className="text-gray-400 hover:text-[#f7dc6f] transition-colors text-sm"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-amber-500 transition-colors text-sm"
+                className="text-gray-400 hover:text-[#f7dc6f] transition-colors text-sm"
               >
                 Terms of Use
               </a>

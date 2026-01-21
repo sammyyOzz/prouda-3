@@ -117,13 +117,13 @@ export default function Courses() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 bg-linear-to-b from-amber-50 to-white px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 bg-[#f7dc6f] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#263d4d] mb-6">
               Our Courses
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl text-[#263d4d] max-w-3xl mx-auto leading-relaxed">
               A structured training program for beginners and transitioning teachers.
             </p>
           </div>
@@ -131,13 +131,13 @@ export default function Courses() {
       </section>
 
       {/* Courses Sections */}
-      <section className="py-12 sm:py-16 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-16 sm:space-y-20 lg:space-y-24">
           {/* Section Header */}
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">Explore Our Training Programs</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">Explore Our Training Programs</h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">Choose the course that best fits your teaching journey</p>
-            <div className="w-20 h-1 bg-amber-400 mx-auto mt-6"></div>
+            <div className="w-20 h-1 bg-[#f7dc6f] mx-auto mt-6"></div>
           </div>
 
           {/* Individual Course Sections */}
@@ -160,7 +160,7 @@ export default function Courses() {
                   </div>
 
                   {/* Title and Short Description */}
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-800 mb-4">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#f7dc6f] mb-4">
                     {course.title}
                   </h3>
                   <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
@@ -174,11 +174,11 @@ export default function Courses() {
 
                   {/* Key Benefits */}
                   <div className="mb-8">
-                    <h4 className="font-bold text-amber-800 mb-4 text-lg">Key Benefits:</h4>
+                    <h4 className="font-bold text-[#f7dc6f] mb-4 text-lg">Key Benefits:</h4>
                     <ul className="space-y-3">
                       {course.benefits.map((benefit, bidx) => (
                         <li key={bidx} className="flex items-start gap-3 text-base text-gray-700">
-                          <span className="text-amber-500 font-bold text-lg mt-0.5">✓</span>
+                          <span className="text-[#1b5276] font-bold text-lg mt-0.5">✓</span>
                           <span>{benefit}</span>
                         </li>
                       ))}
@@ -186,12 +186,12 @@ export default function Courses() {
                   </div>
 
                   {/* Ideal For */}
-                  <div className="mb-10 bg-amber-50 p-6 rounded-lg">
-                    <h4 className="font-bold text-amber-800 mb-4 text-lg">Ideal For:</h4>
+                  <div className="mb-10 bg-[#f7dc6f]/10 p-6 rounded-lg">
+                    <h4 className="font-bold text-[#f7dc6f] mb-4 text-lg">Ideal For:</h4>
                     <ul className="space-y-2">
                       {course.idealFor.map((item, iidx) => (
                         <li key={iidx} className="flex items-start gap-3 text-base text-gray-700">
-                          <span className="text-amber-600 font-bold">•</span>
+                          <span className="text-[#1b5276] font-bold">•</span>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -204,7 +204,7 @@ export default function Courses() {
                       setFormData({ ...formData, course: course.title });
                       document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-base sm:text-lg"
+                    className="w-full bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-base sm:text-lg"
                   >
                     Apply Now
                   </button>
@@ -248,11 +248,11 @@ export default function Courses() {
       
 
       {/* Application Form Section */}
-      <section id="application-form" className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <section id="application-form" className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Form Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">
               Ready to Start Your Journey?
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
@@ -261,11 +261,11 @@ export default function Courses() {
           </div>
 
           {/* Application Form */}
-          <div className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-8 sm:p-10 lg:p-12">
+          <div className="bg-linear-to-br from-[#F8F5ED] to-[#F8F5ED] border-2 border-[#f7dc6f]/30 rounded-lg p-8 sm:p-10 lg:p-12">
             {isSubmitted ? (
               <div className="text-center py-12">
                 <div className="text-7xl mb-4">✓</div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-amber-800 mb-3">Application Submitted!</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#f7dc6f] mb-3">Application Submitted!</h3>
                 <p className="text-base sm:text-lg text-gray-600 mb-2">
                   Thank you for applying to our course.
                 </p>
@@ -277,7 +277,7 @@ export default function Courses() {
               <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                  <label htmlFor="name" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                     Full Name *
                   </label>
                   <input
@@ -287,14 +287,14 @@ export default function Courses() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                     placeholder="Enter your full name"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                  <label htmlFor="email" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                     Email Address *
                   </label>
                   <input
@@ -304,14 +304,14 @@ export default function Courses() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                     placeholder="Enter your email address"
                   />
                 </div>
 
                 {/* Course Selection */}
                 <div>
-                  <label htmlFor="course" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                  <label htmlFor="course" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                     Select Course *
                   </label>
                   <select
@@ -320,7 +320,7 @@ export default function Courses() {
                     value={formData.course}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                   >
                     <option value="">Choose a course</option>
                     {courses.map((course) => (
@@ -333,7 +333,7 @@ export default function Courses() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                  <label htmlFor="message" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                     Why are you interested in this course? *
                   </label>
                   <textarea
@@ -343,7 +343,7 @@ export default function Courses() {
                     onChange={handleInputChange}
                     required
                     rows="6"
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors resize-none text-base"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors resize-none text-base"
                     placeholder="Tell us about your teaching background and what you hope to achieve..."
                   ></textarea>
                 </div>
@@ -352,7 +352,7 @@ export default function Courses() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
+                    className="w-full bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
                   >
                     Submit Application
                   </button>
@@ -368,11 +368,11 @@ export default function Courses() {
       </section>
 
       {/* Why Choose Prouda Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-amber-600 to-amber-700 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-[#1b5276] to-[#153f5e] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Why Choose Prouda Tutors?</h2>
-            <p className="text-lg sm:text-xl text-amber-50 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-white max-w-2xl mx-auto">
               Industry-leading training with real results
             </p>
           </div>
@@ -395,9 +395,9 @@ export default function Courses() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-6">
             Ready to Transform Your Teaching Career?
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
@@ -405,7 +405,7 @@ export default function Courses() {
           </p>
           <a
             href="#application-form"
-            className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 sm:py-5 sm:px-10 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
+            className="inline-block bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-4 px-8 sm:py-5 sm:px-10 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
           >
             Apply for a Course Today
           </a>

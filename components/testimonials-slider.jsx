@@ -183,8 +183,8 @@ export default function TestimonialsSlider() {
             onClick={() => goToSlide(index)}
             className={`rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? 'bg-amber-500 w-3 h-3'
-                : 'bg-gray-300 w-2 h-2 hover:bg-amber-400'
+                ? 'bg-[#f7dc6f] w-3 h-3'
+                : 'bg-gray-300 w-2 h-2'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -197,7 +197,7 @@ export default function TestimonialsSlider() {
           onClick={() => setIsAutoPlay(!isAutoPlay)}
           className={`px-4 sm:px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
             isAutoPlay
-              ? 'bg-amber-500 text-white hover:bg-amber-600'
+              ? 'bg-[#f7dc6f] text-white'
               : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
           }`}
         >

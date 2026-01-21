@@ -74,10 +74,10 @@ export default function Collaboration() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 bg-linear-to-b from-amber-50 to-white px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 bg-[#f7dc6f] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#263d4d] mb-6">
               Partner With Us
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-6">
@@ -91,66 +91,66 @@ export default function Collaboration() {
       </section>
 
       {/* Partnership Types Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">Partnership Opportunities</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">Partnership Opportunities</h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">Explore the different ways we can collaborate</p>
-            <div className="w-20 h-1 bg-amber-400 mx-auto mt-6"></div>
+            <div className="w-20 h-1 bg-[#f7dc6f] mx-auto mt-6"></div>
           </div>
 
           {/* Partnership Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
             {/* Hire Tutors Card */}
-            <div className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-8 sm:p-10 hover:shadow-lg transition-all duration-300">
+            <div className="bg-linear-to-br from-[#F8F5ED] to-white border-2 border-[#f7dc6f]/30 rounded-lg p-8 sm:p-10 hover:shadow-lg transition-all duration-300">
               <div className="text-6xl mb-4">{partnershipTypes[0].icon}</div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-amber-800 mb-3">{partnershipTypes[0].title}</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#f7dc6f] mb-3">{partnershipTypes[0].title}</h3>
               <p className="text-gray-600 text-base sm:text-lg mb-6 leading-relaxed">{partnershipTypes[0].description}</p>
               <a
                 href={partnershipTypes[0].link}
-                className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                className="inline-block bg-[#1b5276] hover:bg-[#153f5e] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
               >
                 Browse Tutors →
               </a>
             </div>
 
             {/* Training Partnerships Card */}
-            <div className="bg-linear-to-br from-blue-50 to-white border-2 border-blue-200 rounded-lg p-8 sm:p-10 hover:shadow-lg transition-all duration-300">
+            <div className="bg-linear-to-br from-[#1b5276] to-[#153f5e] border-2 border-[#1b5276] rounded-lg p-8 sm:p-10 hover:shadow-lg transition-all duration-300">
               <div className="text-6xl mb-4">{partnershipTypes[1].icon}</div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-3">{partnershipTypes[1].title}</h3>
-              <p className="text-gray-600 text-base sm:text-lg mb-6 leading-relaxed">{partnershipTypes[1].description}</p>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">{partnershipTypes[1].title}</h3>
+              <p className="text-white text-base sm:text-lg mb-6 leading-relaxed">{partnershipTypes[1].description}</p>
               <ul className="space-y-3 mb-6">
                 {partnershipTypes[1].benefits.map((benefit, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
-                    <span className="text-blue-600 font-bold mt-1">✓</span>
+                  <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-white">
+                    <span className="text-[#f7dc6f] font-bold mt-1">✓</span>
                     <span>{benefit}</span>
                   </li>
                 ))}
               </ul>
               <a
                 href="#form"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                className="inline-block bg-[#f7dc6f] hover:bg-[#f7dc6f]/90 text-[#263d4d] font-semibold py-3 px-6 rounded-lg transition-all duration-300"
               >
                 Learn More →
               </a>
             </div>
 
             {/* Events & Workshops Card */}
-            <div className="bg-linear-to-br from-purple-50 to-white border-2 border-purple-200 rounded-lg p-8 sm:p-10 hover:shadow-lg transition-all duration-300">
+            <div className="bg-linear-to-br from-[#F8F5ED] to-white border-2 border-[#f7dc6f]/30 rounded-lg p-8 sm:p-10 hover:shadow-lg transition-all duration-300">
               <div className="text-6xl mb-4">{partnershipTypes[2].icon}</div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-3">{partnershipTypes[2].title}</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#f7dc6f] mb-3">{partnershipTypes[2].title}</h3>
               <p className="text-gray-600 text-base sm:text-lg mb-6 leading-relaxed">{partnershipTypes[2].description}</p>
               <ul className="space-y-3 mb-6">
                 {partnershipTypes[2].benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
-                    <span className="text-purple-600 font-bold mt-1">✓</span>
+                    <span className="text-[#1b5276] font-bold mt-1">✓</span>
                     <span>{benefit}</span>
                   </li>
                 ))}
               </ul>
               <a
                 href="#form"
-                className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                className="inline-block bg-[#1b5276] hover:bg-[#153f5e] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
               >
                 Learn More →
               </a>
@@ -160,14 +160,14 @@ export default function Collaboration() {
       </section>
 
       {/* Detailed Sections */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-16 sm:space-y-20 lg:space-y-24">
           {/* Training Partnerships Details */}
-          <div className="bg-white rounded-lg p-8 sm:p-10 lg:p-12 border-l-4 border-blue-600 shadow-md">
+          <div className="bg-[#F8F5ED] rounded-lg p-8 sm:p-10 lg:p-12 border-l-4 border-[#1b5276] shadow-md">
             <div className="flex items-start gap-4 mb-6">
               <div className="text-5xl">📚</div>
               <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900 mb-2">Training Partnerships</h3>
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#f7dc6f] mb-2">Training Partnerships</h3>
                 <p className="text-base sm:text-lg text-gray-600">
                   For schools, organisations, institutions, brands, and communities
                 </p>
@@ -178,22 +178,22 @@ export default function Collaboration() {
               This section is for schools, organisations, institutions, brands, and communities that would like to partner with us to deliver structured training, workshops, or capacity-building programs.
             </p>
 
-            <h4 className="text-xl sm:text-2xl font-bold text-blue-900 mb-4">We collaborate with partners to:</h4>
+            <h4 className="text-xl sm:text-2xl font-bold text-[#f7dc6f] mb-4">We collaborate with partners to:</h4>
             <ul className="space-y-3 mb-8 ml-4">
               <li className="flex items-start gap-3 text-base sm:text-lg text-gray-700">
-                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-[#1b5276] font-bold">•</span>
                 <span>Train teachers, tutors, and educators (online or in-person)</span>
               </li>
               <li className="flex items-start gap-3 text-base sm:text-lg text-gray-700">
-                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-[#1b5276] font-bold">•</span>
                 <span>Host skill-based workshops on online teaching, ESL instruction, curriculum design, classroom management, and digital teaching tools</span>
               </li>
               <li className="flex items-start gap-3 text-base sm:text-lg text-gray-700">
-                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-[#1b5276] font-bold">•</span>
                 <span>Support teacher upskilling, onboarding, and retraining programs</span>
               </li>
               <li className="flex items-start gap-3 text-base sm:text-lg text-gray-700">
-                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-[#1b5276] font-bold">•</span>
                 <span>Co-create custom training sessions tailored to your audience's needs</span>
               </li>
             </ul>
@@ -204,11 +204,11 @@ export default function Collaboration() {
           </div>
 
           {/* Events & Workshops Details */}
-          <div className="bg-white rounded-lg p-8 sm:p-10 lg:p-12 border-l-4 border-purple-600 shadow-md">
+          <div className="bg-[#F8F5ED] rounded-lg p-8 sm:p-10 lg:p-12 border-l-4 border-[#1b5276] shadow-md">
             <div className="flex items-start gap-4 mb-6">
               <div className="text-5xl">🎤</div>
               <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-900 mb-2">Events & Workshops</h3>
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#f7dc6f] mb-2">Events & Workshops</h3>
                 <p className="text-base sm:text-lg text-gray-600">
                   For event organisers, brands, institutions, and communities
                 </p>
@@ -219,22 +219,22 @@ export default function Collaboration() {
               This section is for event organisers, brands, institutions, and communities looking to collaborate with us for educational events, speaking engagements, or learning experiences.
             </p>
 
-            <h4 className="text-xl sm:text-2xl font-bold text-purple-900 mb-4">We are open to participating in:</h4>
+            <h4 className="text-xl sm:text-2xl font-bold text-[#f7dc6f] mb-4">We are open to participating in:</h4>
             <ul className="space-y-3 mb-8 ml-4">
               <li className="flex items-start gap-3 text-base sm:text-lg text-gray-700">
-                <span className="text-purple-600 font-bold">•</span>
+                <span className="text-[#1b5276] font-bold">•</span>
                 <span>Educational conferences, summits, and webinars</span>
               </li>
               <li className="flex items-start gap-3 text-base sm:text-lg text-gray-700">
-                <span className="text-purple-600 font-bold">•</span>
+                <span className="text-[#1b5276] font-bold">•</span>
                 <span>Teacher-focused events, panels, and live sessions</span>
               </li>
               <li className="flex items-start gap-3 text-base sm:text-lg text-gray-700">
-                <span className="text-purple-600 font-bold">•</span>
+                <span className="text-[#1b5276] font-bold">•</span>
                 <span>Online or physical learning events and masterclasses</span>
               </li>
               <li className="flex items-start gap-3 text-base sm:text-lg text-gray-700">
-                <span className="text-purple-600 font-bold">•</span>
+                <span className="text-[#1b5276] font-bold">•</span>
                 <span>Community or brand-hosted events related to education, online work, or digital skills</span>
               </li>
             </ul>
@@ -247,11 +247,11 @@ export default function Collaboration() {
       </section>
 
       {/* Partnership Form Section */}
-      <section id="form" className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <section id="form" className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Form Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">
               Ready to Partner With Us?
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
@@ -260,11 +260,11 @@ export default function Collaboration() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-8 sm:p-10 lg:p-12">
+          <div className="bg-white border-2 border-[#f7dc6f]/30 rounded-lg p-8 sm:p-10 lg:p-12">
             {isSubmitted ? (
               <div className="text-center py-12">
                 <div className="text-7xl mb-4">✓</div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-amber-800 mb-3">Thank You!</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#f7dc6f] mb-3">Thank You!</h3>
                 <p className="text-base sm:text-lg text-gray-600 mb-2">
                   Your partnership inquiry has been submitted successfully.
                 </p>
@@ -276,7 +276,7 @@ export default function Collaboration() {
               <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                  <label htmlFor="name" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                     Full Name *
                   </label>
                   <input
@@ -286,14 +286,14 @@ export default function Collaboration() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                     placeholder="Enter your full name"
                   />
                 </div>
 
                 {/* Company */}
                 <div>
-                  <label htmlFor="company" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                  <label htmlFor="company" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                     Company/Organization Name *
                   </label>
                   <input
@@ -303,14 +303,14 @@ export default function Collaboration() {
                     value={formData.company}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                     placeholder="Enter your organization name"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                  <label htmlFor="email" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                     Email Address *
                   </label>
                   <input
@@ -320,14 +320,14 @@ export default function Collaboration() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                     placeholder="Enter your email address"
                   />
                 </div>
 
                 {/* Partnership Type */}
                 <div>
-                  <label htmlFor="partnershipType" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                  <label htmlFor="partnershipType" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                     Partnership Type *
                   </label>
                   <select
@@ -336,7 +336,7 @@ export default function Collaboration() {
                     value={formData.partnershipType}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                   >
                     <option value="">Select a partnership type</option>
                     <option value="Hire Tutors">Hire Tutors</option>
@@ -348,7 +348,7 @@ export default function Collaboration() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                  <label htmlFor="message" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                     Message / Additional Details *
                   </label>
                   <textarea
@@ -358,7 +358,7 @@ export default function Collaboration() {
                     onChange={handleInputChange}
                     required
                     rows="6"
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors resize-none text-base"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors resize-none text-base"
                     placeholder="Tell us about your partnership interests, project details, timeline, and any specific requirements..."
                   ></textarea>
                 </div>
@@ -367,7 +367,7 @@ export default function Collaboration() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
+                    className="w-full bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
                   >
                     Submit Partnership Inquiry
                   </button>
@@ -383,11 +383,11 @@ export default function Collaboration() {
       </section>
 
       {/* Why Partner With Us Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-amber-600 to-amber-700 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-[#1b5276] to-[#153f5e] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Why Partner With Prouda Tutors?</h2>
-            <p className="text-lg sm:text-xl text-amber-50 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-white max-w-2xl mx-auto">
               We bring expertise, commitment, and results to every partnership
             </p>
           </div>
@@ -410,9 +410,9 @@ export default function Collaboration() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-6">
             Let's Create Impact Together
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
@@ -420,7 +420,7 @@ export default function Collaboration() {
           </p>
           <a
             href="#form"
-            className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 sm:py-5 sm:px-10 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
+            className="inline-block bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-4 px-8 sm:py-5 sm:px-10 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
           >
             Start Your Partnership Journey
           </a>

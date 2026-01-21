@@ -281,13 +281,13 @@ export default function Tutors() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 bg-linear-to-b from-amber-50 to-white px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 bg-[#f7dc6f] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#263d4d] mb-6">
               Hire Certified ESL Tutors
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl text-[#263d4d] max-w-3xl mx-auto leading-relaxed">
               Meet certified teachers trained by Prouda Tutors and ready for
               global classrooms.
             </p>
@@ -296,16 +296,16 @@ export default function Tutors() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-6 sm:p-8 text-center hover:shadow-lg transition-all duration-300"
+                className="bg-linear-to-br from-[#F8F5ED] to-[#F8F5ED] border-2 border-[#f7dc6f]/30 rounded-lg p-6 sm:p-8 text-center hover:shadow-lg transition-all duration-300"
               >
                 <div className="text-5xl sm:text-6xl mb-4">{benefit.icon}</div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-3">
+                <h3 className="text-2xl font-bold text-[#f7dc6f] mb-3">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
@@ -318,11 +318,11 @@ export default function Tutors() {
       </section>
 
       {/* Tutors Grid Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">
             Meet Our Certified Tutors
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-6">
@@ -332,11 +332,11 @@ export default function Tutors() {
             href="https://sites.google.com/view/prouda-tutors/home"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300"
+            className="inline-block bg-[#1b5276] hover:bg-[#153f5e] text-white font-semibold py-2 px-6 rounded-full transition-all duration-300"
           >
             View Full Profiles →
           </a>
-          <div className="w-20 h-1 bg-amber-400 mx-auto mt-6"></div>
+          <div className="w-20 h-1 bg-[#f7dc6f] mx-auto mt-6"></div>
         </div>
 
         {/* Tutors Grid */}
@@ -357,8 +357,8 @@ export default function Tutors() {
 
               {/* Content */}
               <div className="p-5 sm:p-6">
-                <h3 className="text-xl font-bold text-amber-800 mb-2">{tutor.name}</h3>
-                <p className="text-sm sm:text-base text-amber-800 font-semibold bg-amber-100 px-3 py-1 rounded-full inline-block">
+                <h3 className="text-xl font-bold text-[#f7dc6f] mb-2">{tutor.name}</h3>
+                <p className="text-sm sm:text-base text-[#f7dc6f] font-semibold bg-[#f7dc6f]/20 px-3 py-1 rounded-full inline-block">
                   {tutor.niche}
                 </p>
               </div>
@@ -369,11 +369,11 @@ export default function Tutors() {
     </section>
 
       {/* CTA & Contact Form Section */}
-      <section id="hire-tutor" className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <section id="hire-tutor" className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* CTA Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">
               Looking to Hire a Qualified ESL Tutor?
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
@@ -383,11 +383,11 @@ export default function Tutors() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-8 sm:p-10 lg:p-12">
+          <div className="bg-linear-to-br from-[#F8F5ED] to-[#F8F5ED] border-2 border-[#f7dc6f]/30 rounded-lg p-8 sm:p-10 lg:p-12">
             {isSubmitted ? (
               <div className="text-center py-8">
                 <div className="text-5xl mb-4">✓</div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-2">
+                <h3 className="text-2xl font-bold text-[#f7dc6f] mb-2">
                   Thank You!
                 </h3>
                 <p className="text-gray-600">
@@ -401,7 +401,7 @@ export default function Tutors() {
                 <div>
                   <label
                     htmlFor="companyName"
-                    className="block text-sm sm:text-base font-semibold text-amber-800 mb-2"
+                    className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2"
                   >
                     Company/Institution Name *
                   </label>
@@ -412,7 +412,7 @@ export default function Tutors() {
                     value={formData.companyName}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors"
                     placeholder="Enter your company name"
                   />
                 </div>
@@ -421,7 +421,7 @@ export default function Tutors() {
                 <div>
                   <label
                     htmlFor="roleNeeded"
-                    className="block text-sm sm:text-base font-semibold text-amber-800 mb-2"
+                    className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2"
                   >
                     Role/Position Needed *
                   </label>
@@ -431,7 +431,7 @@ export default function Tutors() {
                     value={formData.roleNeeded}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors"
                   >
                     <option value="">Select a role</option>
                     <option value="Full-time Tutor">Full-time Tutor</option>
@@ -447,7 +447,7 @@ export default function Tutors() {
                 <div>
                   <label
                     htmlFor="teachingNiche"
-                    className="block text-sm sm:text-base font-semibold text-amber-800 mb-2"
+                    className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2"
                   >
                     Teaching Niche *
                   </label>
@@ -457,7 +457,7 @@ export default function Tutors() {
                     value={formData.teachingNiche}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors"
                   >
                     <option value="">Select a niche</option>
                     <option value="Kids & Beginners">Kids & Beginners</option>
@@ -477,7 +477,7 @@ export default function Tutors() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm sm:text-base font-semibold text-amber-800 mb-2"
+                    className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2"
                   >
                     Additional Information
                   </label>
@@ -487,7 +487,7 @@ export default function Tutors() {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows="5"
-                    className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors resize-none"
                     placeholder="Tell us more about your requirements, class size, student level, etc."
                   ></textarea>
                 </div>
@@ -496,7 +496,7 @@ export default function Tutors() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                    className="w-full bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Hire a Tutor
                   </button>
@@ -508,14 +508,14 @@ export default function Tutors() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-amber-600 to-amber-700 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-[#1b5276] to-[#153f5e] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 text-center">
             <div>
               <h3 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-3">
                 100+
               </h3>
-              <p className="text-lg sm:text-xl text-amber-50">
+              <p className="text-lg sm:text-xl text-white">
                 Teachers Certified Tutors Ready to Teach
               </p>
             </div>
@@ -523,7 +523,7 @@ export default function Tutors() {
               <h3 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-3">
                 20+
               </h3>
-              <p className="text-lg sm:text-xl text-amber-50">
+              <p className="text-lg sm:text-xl text-white">
                 Institutions Partnering With Us
               </p>
             </div>
@@ -531,7 +531,7 @@ export default function Tutors() {
               <h3 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-3">
                 10+
               </h3>
-              <p className="text-lg sm:text-xl text-amber-50">
+              <p className="text-lg sm:text-xl text-white">
                 Niches Covered
               </p>
             </div>

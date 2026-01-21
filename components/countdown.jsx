@@ -46,7 +46,7 @@ export default function Countdown() {
 
   const CountdownBox = ({ value, label }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-amber-700 text-white rounded-lg p-4 sm:p-6 lg:p-8 min-w-20 sm:min-w-24 lg:min-w-28 shadow-lg hover:shadow-xl transition-shadow">
+      <div className="bg-[#f7dc6f] text-white rounded-lg p-4 sm:p-6 lg:p-8 min-w-20 sm:min-w-24 lg:min-w-28 shadow-lg hover:shadow-xl transition-shadow">
         <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center">
           {String(value).padStart(2, '0')}
         </div>
@@ -60,11 +60,11 @@ export default function Countdown() {
   return (
     <div className="flex gap-4 sm:gap-6 lg:gap-8 justify-center items-end flex-wrap">
       <CountdownBox value={timeLeft.days} label="Days" />
-      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-700 mb-4">:</div>
+      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">:</div>
       <CountdownBox value={timeLeft.hours} label="Hours" />
-      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-700 mb-4">:</div>
+      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">:</div>
       <CountdownBox value={timeLeft.minutes} label="Minutes" />
-      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-700 mb-4">:</div>
+      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">:</div>
       <CountdownBox value={timeLeft.seconds} label="Seconds" />
     </div>
   );

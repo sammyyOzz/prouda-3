@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
+// #f7dc6f, #1b5276, #F8F5ED - Color codes
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -78,6 +80,10 @@ export default function Navbar() {
             />
           </Link>
           <div className='invisible'>.</div>
+
+          <p className='bg-[#f7dc6f]'>one</p>
+          <p className='bg-[#1b5276]'>one</p>
+          <p className='bg-[#F8F5ED]'>one</p>
           
           <ul className="nav-links">
             {navItems.map((item) => (

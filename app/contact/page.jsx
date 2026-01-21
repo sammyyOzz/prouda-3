@@ -69,13 +69,13 @@ export default function Contact() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 bg-linear-to-b from-amber-50 to-white px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 bg-[#f7dc6f] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#263d4d] mb-6">
               Contact Us
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl text-[#263d4d] max-w-3xl mx-auto leading-relaxed">
               We would love to hear from you!
             </p>
           </div>
@@ -83,30 +83,30 @@ export default function Contact() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Info */}
             <div className="space-y-10 px-4">
               <div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-6">Get In Touch</h2>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-6">Get In Touch</h2>
                 <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8">
                   Have questions about our courses, partnerships, or anything else? We're here to help! Reach out to us through any of the channels below.
                 </p>
               </div>
 
               {/* Email */}
-              <div className="bg-linear-to-r from-amber-50 to-white border-2 border-amber-200 rounded-lg p-6 sm:p-8">
+              <div className="bg-linear-to-r from-[#F8F5ED] to-[#F8F5ED] border-2 border-[#f7dc6f]/30 rounded-lg p-6 sm:p-8">
                 <div className="flex items-start gap-4">
                   <div className="text-4xl">✉️</div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-amber-800 mb-2">Email</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#f7dc6f] mb-2">Email</h3>
                     <p className="text-gray-600 text-base sm:text-lg mb-3">
                       Feel free to reach out to us directly via email
                     </p>
                     <a
                       href="mailto:proudatutors@gmail.com"
-                      className="inline-block text-amber-600 hover:text-amber-700 font-semibold text-base sm:text-lg transition-colors"
+                      className="inline-block text-[#1b5276] hover:text-[#153f5e] font-semibold text-base sm:text-lg transition-colors"
                     >
                       proudatutors@gmail.com
                     </a>
@@ -116,7 +116,7 @@ export default function Contact() {
 
               {/* Social Media */}
               <div className="bg-white border-2 border-gray-200 rounded-lg p-6 sm:p-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-amber-800 mb-6">Follow Us</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#f7dc6f] mb-6">Follow Us</h3>
                 <p className="text-gray-600 text-base sm:text-lg mb-6">
                   Connect with us on social media for updates, tips, and community highlights
                 </p>
@@ -129,7 +129,7 @@ export default function Contact() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-amber-500 transition-all duration-300 ${link.color}`}
+                        className={`flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-[#f7dc6f] transition-all duration-300 ${link.color}`}
                       >
                         <div className="mb-2">
                           <IconComponent className="w-8 h-8" />
@@ -152,8 +152,8 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div id="send-message" className="px-4">
-              <div className="bg-linear-to-br from-amber-50 to-white border-2 border-amber-200 rounded-lg p-8 sm:p-10 lg:p-12">
-                <h3 className="text-2xl sm:text-3xl font-bold text-amber-800 mb-2">Send Us a Message</h3>
+              <div className="bg-linear-to-br from-[#F8F5ED] to-[#F8F5ED] border-2 border-[#f7dc6f]/30 rounded-lg p-8 sm:p-10 lg:p-12">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#f7dc6f] mb-2">Send Us a Message</h3>
                 <p className="text-gray-600 text-base mb-8">
                   Fill out the form below and we'll get back to you as soon as possible.
                 </p>
@@ -170,7 +170,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Name */}
                     <div>
-                      <label htmlFor="name" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                      <label htmlFor="name" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                         Full Name *
                       </label>
                       <input
@@ -180,14 +180,14 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                        className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                         placeholder="Enter your full name"
                       />
                     </div>
 
                     {/* Email */}
                     <div>
-                      <label htmlFor="email" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                      <label htmlFor="email" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                         Email Address *
                       </label>
                       <input
@@ -197,14 +197,14 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                        className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                         placeholder="Enter your email address"
                       />
                     </div>
 
                     {/* Subject */}
                     <div>
-                      <label htmlFor="subject" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                      <label htmlFor="subject" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                         Subject *
                       </label>
                       <input
@@ -214,14 +214,14 @@ export default function Contact() {
                         value={formData.subject}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors text-base"
+                        className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
                         placeholder="What is this about?"
                       />
                     </div>
 
                     {/* Message */}
                     <div>
-                      <label htmlFor="message" className="block text-sm sm:text-base font-semibold text-amber-800 mb-2">
+                      <label htmlFor="message" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
                         Message *
                       </label>
                       <textarea
@@ -231,7 +231,7 @@ export default function Contact() {
                         onChange={handleInputChange}
                         required
                         rows="6"
-                        className="w-full px-4 py-3 border-2 border-amber-200 rounded-lg focus:outline-none focus:border-amber-500 transition-colors resize-none text-base"
+                        className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors resize-none text-base"
                         placeholder="Tell us your message or inquiry..."
                       ></textarea>
                     </div>
@@ -239,7 +239,7 @@ export default function Contact() {
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
+                      className="w-full bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
                     >
                       Send Message
                     </button>
@@ -255,7 +255,7 @@ export default function Contact() {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">Frequently Asked Questions</h2>
             <p className="text-lg sm:text-xl text-gray-600">Have questions? We might have answers!</p>
           </div>
 
@@ -278,8 +278,8 @@ export default function Contact() {
                 a: 'Visit our Collaboration & Partnership page to learn about partnership opportunities and submit your inquiry.',
               },
             ].map((faq, idx) => (
-              <div key={idx} className="bg-white border-l-4 border-amber-500 rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-lg sm:text-xl font-bold text-amber-800 mb-3">{faq.q}</h3>
+              <div key={idx} className="bg-white border-l-4 border-[#f7dc6f] rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-lg sm:text-xl font-bold text-[#f7dc6f] mb-3">{faq.q}</h3>
                 <p className="text-gray-700 text-base sm:text-lg">{faq.a}</p>
               </div>
             ))}
@@ -288,24 +288,24 @@ export default function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-amber-600 to-amber-700 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-[#1b5276] to-[#153f5e] px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Join Our Community
           </h2>
-          <p className="text-lg sm:text-xl text-amber-50 mb-8 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white mb-8 leading-relaxed max-w-2xl mx-auto">
             Whether you're ready to start your teaching journey or looking to partner with us, we're excited to connect with you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <a
               href="#send-message"
-              className="inline-block bg-white text-amber-600 font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg text-base sm:text-lg"
+              className="inline-block bg-white text-[#1b5276] font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-lg hover:bg-[#F8F5ED] transition-all duration-300 shadow-lg text-base sm:text-lg"
             >
               Send a Message
             </a>
             <a
               href="/courses"
-              className="inline-block border-2 border-white text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-lg hover:bg-white hover:text-amber-600 transition-all duration-300 text-base sm:text-lg"
+              className="inline-block border-2 border-white text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-lg hover:bg-white hover:text-[#1b5276] transition-all duration-300 text-base sm:text-lg"
             >
               Explore Courses
             </a>
