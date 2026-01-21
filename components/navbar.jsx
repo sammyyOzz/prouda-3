@@ -81,10 +81,6 @@ export default function Navbar() {
           </Link>
           <div className='invisible'>.</div>
 
-          <p className='bg-[#f7dc6f]'>one</p>
-          <p className='bg-[#1b5276]'>one</p>
-          <p className='bg-[#F8F5ED]'>one</p>
-          
           <ul className="nav-links">
             {navItems.map((item) => (
               <li key={item.name}>

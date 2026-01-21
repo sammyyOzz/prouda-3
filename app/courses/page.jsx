@@ -150,7 +150,7 @@ export default function Courses() {
             >
               {/* Left Column - Information */}
               <div className={`${idx % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-                <div className="bg-white">
+                <div className="bg-white p-8">
                   {/* Badge and Icon */}
                   <div className="flex items-start gap-4 mb-6">
                     <div className="text-5xl sm:text-6xl">{course.icon}</div>
@@ -369,7 +369,7 @@ export default function Courses() {
 
       {/* Why Choose Prouda Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-[#1b5276] to-[#153f5e] px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Why Choose Prouda Tutors?</h2>
             <p className="text-lg sm:text-xl text-white max-w-2xl mx-auto">

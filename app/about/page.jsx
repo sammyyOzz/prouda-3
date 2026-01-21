@@ -44,7 +44,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Image */}
-            <div className="slide-in-left">
+            <div className="slide-in-left px-4">
               <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-2xl">
                 <Image
                   src="/tutoring.avif"
