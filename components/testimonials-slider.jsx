@@ -89,7 +89,7 @@ export default function TestimonialsSlider() {
       {/* Main Slider */}
       <div className="relative w-full bg-black rounded-lg overflow-hidden shadow-2xl">
         {/* Slide Container */}
-        <div className="relative w-full aspect-video">
+        <div className={`relative w-full aspect-video ${currentTestimonial.type === 'image' ? 'bg-gray-900 flex items-center justify-center' : ''}`}>
           {currentTestimonial.type === 'video' ? (
             <iframe
               key={`video-${currentIndex}`}
@@ -106,7 +106,7 @@ export default function TestimonialsSlider() {
               src={currentTestimonial.src}
               alt={currentTestimonial.alt}
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           )}

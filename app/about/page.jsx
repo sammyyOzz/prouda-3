@@ -47,7 +47,7 @@ export default function About() {
             <div className="slide-in-left">
               <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://media.istockphoto.com/id/2174878381/photo/female-teacher-with-group-of-students.jpg?s=2048x2048&w=is&k=20&c=fFjgqj4zVu-umjO2gtdvHSlesS9kbYw-6rH3xuKVf1A="
+                  src="/tutoring.avif"
                   alt="Prouda Tutors - Teachers teaching globally"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
