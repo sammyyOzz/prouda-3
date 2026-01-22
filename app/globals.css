@@ -215,8 +215,9 @@ https://templatemo.com/tm-593-personal-shape
             padding: 0.5rem 0;
         }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #f7dc6f;
             transform: translateY(-1px);
         }
 
@@ -227,13 +228,14 @@ https://templatemo.com/tm-593-personal-shape
             height: 2px;
             bottom: 0;
             left: 50%;
-            background: var(--gradient-primary);
+            background: #f7dc6f;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             transform: translateX(-50%);
             border-radius: 1px;
         }
 
-        .nav-links a:hover::after {
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
             width: 100%;
         }
 

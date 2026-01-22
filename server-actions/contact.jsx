@@ -4,8 +4,7 @@ import { ContactFormSchema } from "@/validations";
 
 export async function createContact(formData) {
   const validatedFields = ContactFormSchema.safeParse({
-    firstName: formData.get("firstName"),
-    lastName: formData.get("lastName"),
+    firstName: formData.get("name"),
     email: formData.get("email"),
     // message: formData.get('message'),
   });
@@ -17,8 +16,7 @@ export async function createContact(formData) {
     };
   }
 
-  const firstName = formData.get("firstName");
-  const lastName = formData.get("lastName");
+  const name = formData.get("name");
   const email = formData.get("email");
 
   try {
@@ -31,10 +29,9 @@ export async function createContact(formData) {
       body: JSON.stringify({
         email,
         attributes: {
-          FIRSTNAME: firstName,
-          LASTNAME: lastName
+          FULL_NAME: name,
         },
-        listIds: [6],
+        listIds: [7], // ID of the lists to add the contact to
         updateEnabled: true // Set to true to update if the contact exists
       }),
     });

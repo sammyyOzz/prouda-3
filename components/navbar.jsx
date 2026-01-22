@@ -61,7 +61,7 @@ export default function Navbar() {
     { name: 'Tutors', href: '/tutors' },
     { name: 'Courses', href: '/courses' },
     { name: 'Collaboration', href: '/collaboration' },
-    { name: 'Blogs', href: '/blogs' },
+    // { name: 'Blogs', href: '/blogs' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -84,7 +84,9 @@ export default function Navbar() {
           <ul className="nav-links">
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link href={item.href}>{item.name}</Link>
+                <Link href={item.href} className={pathname === item.href ? 'active' : ''}>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
