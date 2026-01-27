@@ -3,8 +3,41 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
 export const metadata = {
-  title: 'Personal Shape - Creative Designer',
-  description: 'Creative designer portfolio',
+  title: "Prouda Tutors: Become an online tutor",
+  description: "Prouda: Kickstart, grow and thrive in your tutoring business!",
+  keywords: ["prouda", "tutors", "tutoring", "online", "aspiring", "tutor"],
+  robots: {
+    index: true,  
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  // Recommended additional metadata
+  metadataBase: new URL('https://proudatutors.com'), // Important for canonical URLs
+  alternates: {
+    canonical: '/', // Recommended for avoiding duplicate content
+  },
+  openGraph: {
+    title: "Prouda Tutors: Become an online tutor",
+    description: "Prouda: Kickstart, grow and thrive in your tutoring business!",
+    type: 'website',
+    // Add your actual Open Graph image URL
+    images: [logoYellow.src], 
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Prouda Tutors: Become an online tutor",
+    description: "Prouda: Kickstart, grow and thrive in your tutoring business!",
+    // Add your Twitter image URL
+    images: [logoWhite.src],
+  },
 };
 
 export default function RootLayout({ children }) {
