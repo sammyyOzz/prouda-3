@@ -1,6 +1,8 @@
 import './globals.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import logoYellow from "@/app/images/logo-yellow.png";
+import logoWhite from "@/app/images/logo-white.png";
 
 export const metadata = {
   title: "Prouda Tutors: Become an online tutor",
