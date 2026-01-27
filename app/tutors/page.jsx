@@ -248,12 +248,15 @@ const benefits = [
 export default function Tutors() {
   const [formData, setFormData] = useState({
     companyName: "",
+    email: "",
     roleNeeded: "",
     teachingNiche: "",
     message: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -263,19 +266,51 @@ export default function Tutors() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        companyName: "",
-        roleNeeded: "",
-        teachingNiche: "",
-        message: "",
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/tutors/hire", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          companyName: formData.companyName,
+          email: formData.email,
+          roleNeeded: formData.roleNeeded,
+          teachingNiche: formData.teachingNiche,
+          message: formData.message,
+        }),
       });
-    }, 3000);
+
+      const result = await response.json();
+
+      if (result.isSuccess) {
+        setIsSubmitted(true);
+        setFormData({
+          companyName: "",
+          email: "",
+          roleNeeded: "",
+          teachingNiche: "",
+          message: "",
+        });
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        setError(result.message || "Failed to submit inquiry. Please try again.");
+      }
+    } catch (err) {
+      console.error("Tutor hire inquiry error:", err);
+      setError("An unexpected error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -348,9 +383,10 @@ export default function Tutors() {
             >
               {/* Image */}
               <div className="relative w-full aspect-square overflow-hidden">
-                <img
+                <Image
                   src={tutor.image}
                   alt={tutor.name}
+                  fill
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -397,6 +433,11 @@ export default function Tutors() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
+                {error && (
+                  <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+                    <p className="text-red-800 text-sm sm:text-base">{error}</p>
+                  </div>
+                )}
                 {/* Company Name */}
                 <div>
                   <label
@@ -414,6 +455,26 @@ export default function Tutors() {
                     required
                     className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors"
                     placeholder="Enter your company name"
+                  />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2"
+                  >
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors"
+                    placeholder="Enter your email address"
                   />
                 </div>
 
@@ -496,9 +557,10 @@ export default function Tutors() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                    disabled={isLoading}
+                    className="w-full bg-[#1b5276] hover:bg-[#153f5e] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
-                    Hire a Tutor
+                    {isLoading ? "Submitting..." : "Hire a Tutor"}
                   </button>
                 </div>
               </form>

@@ -143,17 +143,16 @@ export default function Home() {
       </section>
 
       {/* Launching Soon Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
+      {/* <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7dc6f] mb-4">Launching Soon</h2>
             <p className="text-lg sm:text-xl text-gray-600 mb-12 lg:mb-16">Get ready for something amazing. Our platform is coming soon!</p>
             
-            {/* Countdown Component */}
             <Countdown />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Courses Highlight Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-[#F8F5ED] px-4 sm:px-6 lg:px-8">

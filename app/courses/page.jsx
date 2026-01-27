@@ -5,12 +5,15 @@ import { useState } from 'react';
 export default function Courses() {
   const [activeTab, setActiveTab] = useState(null);
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     course: '',
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -20,20 +23,52 @@ export default function Courses() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Course application submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        course: '',
-        message: '',
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/courses/apply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          course: formData.course,
+          message: formData.message,
+        }),
       });
-      setActiveTab(null);
-    }, 3000);
+
+      const result = await response.json();
+
+      if (result.isSuccess) {
+        setIsSubmitted(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          course: '',
+          message: '',
+        });
+        setActiveTab(null);
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        setError(result.message || 'Failed to submit application. Please try again.');
+      }
+    } catch (err) {
+      console.error('Course application error:', err);
+      setError('An unexpected error occurred. Please try again later.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const courses = [
@@ -90,7 +125,7 @@ export default function Courses() {
     },
     {
       id: 'creative',
-      title: 'Creative Teacher Workshops',
+      title: 'Creative Teacher Workshop',
       badge: 'FREE Community',
       badgeColor: 'bg-green-500',
       icon: '🎨',
@@ -275,20 +310,42 @@ export default function Courses() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
-                {/* Name */}
+                {error && (
+                  <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+                    <p className="text-red-800 text-sm sm:text-base">{error}</p>
+                  </div>
+                )}
+                {/* First Name */}
                 <div>
-                  <label htmlFor="name" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
-                    Full Name *
+                  <label htmlFor="firstName" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
+                    First Name *
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
-                    placeholder="Enter your full name"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+
+                {/* Last Name */}
+                <div>
+                  <label htmlFor="lastName" className="block text-sm sm:text-base font-semibold text-[#f7dc6f] mb-2">
+                    Last Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-[#f7dc6f]/30 rounded-lg focus:outline-none focus:border-[#f7dc6f] transition-colors text-base"
+                    placeholder="Enter your last name"
                   />
                 </div>
 
@@ -352,9 +409,10 @@ export default function Courses() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg"
+                    disabled={isLoading}
+                    className="w-full bg-[#1b5276] hover:bg-[#153f5e] text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Submit Application
+                    {isLoading ? 'Submitting...' : 'Submit Application'}
                   </button>
                 </div>
 
