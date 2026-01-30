@@ -72,10 +72,25 @@ export async function POST(request) {
       body: JSON.stringify(contactPayload),
     });
 
-    const contactData = await contactRes.json();
+    // Try to parse response but handle cases where JSON parsing might fail
+    let contactData;
+    try {
+      contactData = await contactRes.json();
+    } catch (parseErr) {
+      console.error("Failed to parse Brevo response:", parseErr);
+      contactData = {};
+    }
 
     if (!contactRes.ok) {
       console.error("Brevo contact creation error:", contactData);
+      // Return success anyway if it's a 409 (contact already exists) or other non-critical errors
+      if (contactRes.status === 409) {
+        console.log("Contact already exists, treating as success");
+        return NextResponse.json({
+          isSuccess: true,
+          message: "Your inquiry has been submitted successfully! We'll be in touch soon with tutor recommendations.",
+        });
+      }
       return NextResponse.json(
         {
           isSuccess: false,
