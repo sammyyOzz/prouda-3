@@ -58,6 +58,7 @@ export default function Navbar() {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
+    { name: 'Career Quiz', href: '/career-quiz' },
     { name: 'Tutors', href: '/tutors' },
     { name: 'Courses', href: '/courses' },
     { name: 'Collaboration', href: '/collaboration' },
