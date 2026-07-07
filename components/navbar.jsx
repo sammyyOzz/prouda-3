@@ -86,6 +86,7 @@ export default function Navbar() {
     { name: 'Career Quiz', href: '/career-quiz' },
     { name: 'Platform Finder', href: '/platform-finder' },
     { name: 'Collaboration', href: '/collaboration' },
+    { name: 'Video Script Generator', href: '/video-script-generator' },
     // { name: 'Blogs', href: '/blogs' },
   ];
 
