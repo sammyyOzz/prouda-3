@@ -42,3 +42,29 @@ export const ContactFormSchema = z.object({
     .regex(/[a-zA-Z]/, { message: "Your message cannot be empty." })
     .trim(),
 });
+
+export const MockInterviewCreateSchema = z.object({
+  role: z
+    .string()
+    .min(1, { message: "Role is required." })
+    .max(200, { message: "Role is too long." })
+    .trim(),
+  experience_level: z
+    .string()
+    .max(100, { message: "Experience level is too long." })
+    .trim()
+    .optional()
+    .nullable(),
+  subject: z
+    .string()
+    .max(200, { message: "Subject is too long." })
+    .trim()
+    .optional()
+    .nullable(),
+  num_questions: z
+    .number()
+    .int({ message: "Number of questions must be a whole number." })
+    .min(1, { message: "At least 1 question is required." })
+    .max(20, { message: "Maximum 20 questions allowed." })
+    .default(5),
+});

@@ -99,7 +99,7 @@ export default function Navbar() {
     { name: 'Platform Finder', href: '/platform-finder' },
     { name: 'Collaboration', href: '/collaboration' },
     { name: 'Video Script Generator', href: '/video-script-generator' },
-    // { name: 'Blogs', href: '/blogs' },
+    { name: 'Mock Interview', href: '/mock-interview' },
   ];
 
   const isMoreActive = moreNavItems.some((item) => item.href === pathname);
