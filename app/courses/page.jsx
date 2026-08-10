@@ -54,23 +54,23 @@ const courses = [
     link: 'https://proudatutors.selar.com/eslpracticum',
     imageLabel: 'Self-paced training preview',
   },
-  {
-    id: 'self-paced-course',
-    title: 'Self-Paced ESL Teacher Training',
-    subtitle: 'Flexible online teacher training with practical support',
-    description:
-      'Learn the foundations of online ESL teaching, build your profile, and prepare for real opportunities with flexible, practical training.',
-    highlights: [
-      'Online ESL teaching foundations',
-      'Professional profile setup and optimization',
-      'Teaching skills and classroom management',
-      'Interview preparation and access to interviews',
-      'Exclusive support community and job referrals',
-    ],
-    image: '/self-paced.jpeg',
-    link: 'https://nestuge.com/proudatutorselfpaced',
-    imageLabel: 'Self-paced course preview',
-  },
+  // {
+  //   id: 'self-paced-course',
+  //   title: 'Self-Paced ESL Teacher Training',
+  //   subtitle: 'Flexible online teacher training with practical support',
+  //   description:
+  //     'Learn the foundations of online ESL teaching, build your profile, and prepare for real opportunities with flexible, practical training.',
+  //   highlights: [
+  //     'Online ESL teaching foundations',
+  //     'Professional profile setup and optimization',
+  //     'Teaching skills and classroom management',
+  //     'Interview preparation and access to interviews',
+  //     'Exclusive support community and job referrals',
+  //   ],
+  //   image: '/self-paced.jpeg',
+  //   link: 'https://nestuge.com/proudatutorselfpaced',
+  //   imageLabel: 'Self-paced course preview',
+  // },
   {
     id: 'mentorship',
     title: '5-Week Intensive ESL Teacher Mentorship',
