@@ -91,6 +91,7 @@ export default function Navbar() {
     { name: 'About', href: '/about' },
     { name: 'Tutors', href: '/tutors' },
     { name: 'Courses', href: '/courses' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' },
   ];
 
