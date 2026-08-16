@@ -101,6 +101,7 @@ export default function Navbar() {
     { name: 'Collaboration', href: '/collaboration' },
     { name: 'Video Script Generator', href: '/video-script-generator' },
     { name: 'Mock Interview', href: '/mock-interview' },
+    { name: 'CV / Resume Builder', href: '/cv-builder' },
   ];
 
   const isMoreActive = moreNavItems.some((item) => item.href === pathname);
