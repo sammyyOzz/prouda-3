@@ -3,6 +3,7 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import logoYellow from "@/app/images/logo-yellow.png";
 import logoWhite from "@/app/images/logo-white.png";
+import { AuthProvider } from '@/components/auth/auth-provider';
 
 export const metadata = {
   title: "Prouda Tutors: Become an online tutor",
@@ -46,11 +47,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <div className='pt-16'>
-          {children}
-        </div>
-        <Footer />
+        <AuthProvider>
+          <Navbar />
+          <div className='pt-16'>
+            {children}
+          </div>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
